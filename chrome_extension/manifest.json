@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Instruction Structurer",
+  "version": "1.0.0",
+  "description": "AI-powered instruction analyzer and classifier",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Open Instruction Structurer"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "options_page": "settings.html"
+}
