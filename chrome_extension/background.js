@@ -27,17 +27,16 @@ async function handleParse(msg, sendResponse) {
     
     console.log('Sending request to:', serverUrl);
     
+    const payload = { ...msg };
+    delete payload.action;
+
     const response = await fetch(`${serverUrl}/parse`, {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
         'ngrok-skip-browser-warning': 'true'
       },
-      body: JSON.stringify({ 
-        text: msg.text,
-        query: msg.query,
-        hasPageContent: msg.hasPageContent
-      })
+      body: JSON.stringify(payload)
     });
     
     if (!response.ok) {

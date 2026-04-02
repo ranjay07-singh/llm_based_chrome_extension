@@ -132,13 +132,15 @@
     .is-card:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(0, 212, 255, 0.3); }
     .is-card-num { font-size: 11px; color: #00d4ff; font-weight: 600; margin-bottom: 4px; display: block; }
     .is-card-text { font-size: 14px; color: #e4e4e7; line-height: 1.5; margin-bottom: 8px; display: block; word-wrap: break-word; overflow-wrap: break-word; }
-    .is-type { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-    .is-type-simple { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; }
-    .is-type-mandatory { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: #fff; }
-    .is-type-sequential { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #fff; }
-    .is-type-conditional { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: #fff; }
-    .is-type-exclusive { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: #fff; }
-    .is-type-goal { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #fff; }
+    .is-type { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+    /* 7 CLASSIFICATION CATEGORIES */
+    .is-type-simple { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; }           /* SIMPLE INSTRUCTION */
+    .is-type-sequence { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #fff; }        /* INSTRUCTION WITH SEQUENCE */
+    .is-type-parallel { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: #fff; }        /* PARALLEL INSTRUCTION */
+    .is-type-purpose { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #fff; }         /* INSTRUCTION WITH PURPOSE */
+    .is-type-reason { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: #fff; }          /* INSTRUCTION WITH REASON */
+    .is-type-exclusive-obj { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: #fff; }   /* EXCLUSIVE INSTRUCTION (OBJECTS) */
+    .is-type-exclusive-act { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: #fff; }   /* EXCLUSIVE INSTRUCTION (ACTIONS) */
 
     .is-loading { display: flex; align-items: center; gap: 8px; padding: 16px; color: #a1a1aa; }
     .is-dots { display: flex; gap: 4px; }
@@ -212,8 +214,8 @@
       <div class="is-welcome">
         <span class="is-welcome-icon">🤖</span>
         <span class="is-welcome-title">Welcome to Instruction Structurer</span>
-        <span class="is-welcome-text">Enter a topic or query below. I'll analyze instructions and classify them into Simple, Mandatory, Sequential, Conditional, Exclusive, or Goal-based types.</span>
-      </div>
+        <span class="is-welcome-text"></span>
+      </div>Enter a topic or query below. I'll generate and classify instructions into: Simple, Sequence, Parallel, Purpose, Reason, or Exclusive types.
     </div>
     <div class="is-input-area">
       <div class="is-toggle-row">
@@ -298,32 +300,82 @@
   }
 
   function extractPageContent(query) {
-    const paragraphs = document.querySelectorAll('p, li, h1, h2, h3, h4, h5, h6, td, span, div');
-    const queryLower = query.toLowerCase();
+    const paragraphs = document.querySelectorAll('article p, article li, main p, main li, [role="main"] p, [role="main"] li, [itemprop="articleBody"] p, [itemprop="articleBody"] li, h1, h2, h3');
+    const queryLower = (query || '').toLowerCase();
     const keywords = queryLower.split(/\s+/).filter(w => w.length > 2);
     let relevantContent = [];
     paragraphs.forEach(el => {
+      if (el.closest('nav, footer, aside, header, .comment, #comments, [id*="comment"], [class*="comment"], .sidebar, .related, .recommend')) {
+        return;
+      }
       const text = el.innerText.trim();
       if (text.length > 20 && text.length < 500) {
         const textLower = text.toLowerCase();
-        const matchCount = keywords.filter(kw => textLower.includes(kw)).length;
+        if (textLower.includes('http://') || textLower.includes('https://') || textLower.includes('www.')) return;
+        const matchCount = keywords.length > 0 ? keywords.filter(kw => textLower.includes(kw)).length : 0;
         if (matchCount > 0) relevantContent.push({ text, score: matchCount });
       }
     });
     relevantContent.sort((a, b) => b.score - a.score);
-    const topContent = relevantContent.slice(0, 5).map(c => c.text);
-    return topContent.length > 0 ? topContent.join('\n\n') : null;
+    const topContent = relevantContent.slice(0, 8).map(c => c.text);
+
+    if (topContent.length > 0) {
+      return topContent.join('\n\n').slice(0, 4000);
+    }
+
+    const genericBlocks = [];
+    paragraphs.forEach(el => {
+      const text = el.innerText.trim();
+      if (text.length >= 30 && text.length <= 300) {
+        genericBlocks.push(text);
+      }
+    });
+
+    const deduped = [];
+    const seen = new Set();
+    for (const block of genericBlocks) {
+      const key = block.toLowerCase().slice(0, 80);
+      if (!seen.has(key)) {
+        seen.add(key);
+        deduped.push(block);
+      }
+      if (deduped.length >= 12) break;
+    }
+
+    if (deduped.length > 0) {
+      return deduped.join('\n\n').slice(0, 4000);
+    }
+
+    const bodyText = (document.body && document.body.innerText ? document.body.innerText : '').trim();
+    return bodyText ? bodyText.slice(0, 4000) : null;
+  }
+
+  function isWebsiteIntent(query) {
+    if (!query) return false;
+    const q = query.toLowerCase();
+    const websiteKeywords = [
+      'website', 'web site', 'web page', 'webpage', 'browser', 'chrome', 'page content',
+      'site content', 'this page', 'current page', 'from page', 'from website',
+      'summarize web', 'summarize website', 'summarize webpage', 'summarise web',
+      'summarise website', 'summerize web', 'summerize website', 'summerize webpage',
+      'read my website', 'according to my web page',
+      'based on this page', 'extract from page'
+    ];
+    return websiteKeywords.some(k => q.includes(k));
   }
 
   function getTypeClass(type) {
     const t = (type || '').toLowerCase();
+    // Match new 7 categories
+    if (t.includes('exclusive') && t.includes('object')) return 'is-type-exclusive-obj';
+    if (t.includes('exclusive') && t.includes('action')) return 'is-type-exclusive-act';
+    if (t.includes('exclusive')) return 'is-type-exclusive-obj';  // Default exclusive
+    if (t.includes('parallel')) return 'is-type-parallel';
+    if (t.includes('sequence') || t.includes('sequen')) return 'is-type-sequence';
+    if (t.includes('purpose')) return 'is-type-purpose';
+    if (t.includes('reason')) return 'is-type-reason';
     if (t.includes('simple')) return 'is-type-simple';
-    if (t.includes('mandatory') || t.includes('must')) return 'is-type-mandatory';
-    if (t.includes('sequen')) return 'is-type-sequential';
-    if (t.includes('condition')) return 'is-type-conditional';
-    if (t.includes('exclusive') || t.includes('choice')) return 'is-type-exclusive';
-    if (t.includes('goal')) return 'is-type-goal';
-    return 'is-type-simple';
+    return 'is-type-simple';  // Default fallback
   }
 
   function formatResponse(data, query) {
@@ -388,16 +440,23 @@
     inputField.value = '';
     inputField.style.height = 'auto';
     
-    // For task-based queries (make, how to, create, etc.), don't use page content
-    const isTaskQuery = /^(make|how to|create|build|cook|prepare|install|setup|fix|write|design)/i.test(query);
-    
     showLoading();
-    
+
+    const websiteIntent = isWebsiteIntent(query);
+    const shouldUsePageContent = extractToggle.checked;
+    const extractedContent = shouldUsePageContent ? extractPageContent(query) : null;
+
     const requestData = {
       text: query,
       query: query,
-      hasPageContent: false
+      hasPageContent: Boolean(extractedContent),
+      mode: extractedContent ? 'website' : (websiteIntent ? 'website' : 'generate')
     };
+
+    if (extractedContent) {
+      requestData.website_content = extractedContent;
+      requestData.pageContent = extractedContent;
+    }
     
     chrome.runtime.sendMessage({ action: 'parse', ...requestData }, (response) => {
       hideLoading();

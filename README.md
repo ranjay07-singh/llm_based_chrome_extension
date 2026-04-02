@@ -18,7 +18,7 @@ Model_Training/Datasets/
 
 Model Training
 
-The base model used for training is LLaMA-3.2 (1B parameters).
+The base model used for training is LLaMA-3 (8B parameters).
 
 Fine-tuning was performed using QLoRA (Quantized Low-Rank Adaptation) for memory-efficient training.
 
@@ -61,7 +61,7 @@ Python, Pandas
 
 Hugging Face Transformers
 
-LLaMA-3.2 (1B)
+LLaMA-3 (8B)
 
 LoRA / QLoRA
 
