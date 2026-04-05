@@ -1,0 +1,1802 @@
+﻿[
+    {
+        "input": "Listen calmly",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Give space respectfully",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Speak gently if anger appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Set rules then explain",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Respect privacy and boundaries",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Choose discipline or discussion",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Take phone or book",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Encourage sports if boredom appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Observe behavior then guide",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide food and comfort",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Stay calm if conflict arises",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Allow freedom or enforce limits",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Discuss goals then support",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Speak clearly",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Maintain eye contact",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Ask questions if confusion appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Listen actively if they talk",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Explain ideas then pause",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use tone and patience",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Send message or call directly",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Use phone or notebook",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Clarify meaning if misunderstanding occurs",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Think then respond",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Show empathy and respect",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Encourage sharing if hesitation appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Use humor or stay serious",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Focus attention then reply",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Speak softly",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Offer water",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Provide space if stress increases",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Guide breathing if panic appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Sit quietly then listen",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use calm tone and patience",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Stay silent or speak gently",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Take music or book",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Reduce noise if irritation rises",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Observe mood then respond",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide comfort and reassurance",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Encourage rest if fatigue appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Walk outside or stay indoors",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Pause then guide",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Reduce bottle gradually",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Offer cup",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Switch routine if dependency increases",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Remove bottle then comfort",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use cup and encouragement",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Offer water or juice",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Feed early or delay feeding",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Distract child if crying starts",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Change habit then observe",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide toy and attention",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Stay patient if resistance appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Continue routine or modify schedule",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Remove night bottle then soothe",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Observe behavior",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Check eye rubbing",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Notice crying if tiredness increases",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Watch signals then respond",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Check yawning and irritability",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Look at face or posture",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Continue observation or stop activity",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Identify mood if crankiness appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Monitor time then adjust",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Note behavior and reaction",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Respond quickly if signs increase",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Keep routine or change schedule",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Detect signs then act",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Set clear rules",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Use calm voice",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Give warning if misbehavior occurs",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Apply timeout then explain",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Offer praise and attention",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use reward or consequence",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Give toy or book",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Stay consistent if behavior repeats",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Correct action then guide",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Show patience and control",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Ignore minor mistakes or address issues",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Observe behavior then respond",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide structure and support",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Fill tub",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Check water temperature",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Hold child if slipping occurs",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Place child then wash",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use soap and water",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use sponge or hand",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Wash gently or rinse quickly",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Clean body if dirt appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Rinse soap then dry",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide towel and comfort",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Ensure safety if movement increases",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Prepare clothes then dress",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use warm towel or dry cloth",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Maintain grip and balance",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Introduce potty",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Encourage sitting",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Guide child if readiness appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Show method then assist",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use praise and rewards",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use toilet or potty",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Try training or delay process",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Offer support if hesitation appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Set schedule then follow",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain patience and consistency",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Continue effort or pause training",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Observe signals then respond",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Adjust method if resistance appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Research requirements",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Complete paperwork",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Submit forms then wait",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide documents and identification",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Choose agency or independent process",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Use passport or certificate",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Verify eligibility if rules apply",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Attend interview then proceed",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain communication and transparency",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Continue process or withdraw request",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Prepare documents then submit",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure consent if requirement exists",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Provide support and clarity",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Teach kindness",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Model respect",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Correct behavior if aggression appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Set expectations then reinforce",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Encourage empathy and sharing",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use praise or correction",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Give toy or reward",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Address actions if bullying appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Promote fairness and inclusion",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Support change or apply discipline",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Discuss impact then correct",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain consistency and guidance",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Intervene early if warning signs appear",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Save money",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Plan budget",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Reduce expenses if savings decrease",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Review goals then adjust",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain discipline and consistency",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Choose stocks or bonds",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Work longer or retire early",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Analyze portfolio then rebalance",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Secure insurance and backup",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Consult advisor if uncertainty appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Build savings or reduce spending",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Prepare documents then organize",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure comfort and security",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Design pattern",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Select fabric",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Adjust size if fitting changes",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Cut fabric then stitch",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use needle and thread",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Pick silk or satin",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Sew manually or use machine",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Fit dress then refine",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Add lace and decoration",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Modify design if issues appear",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Keep style or redesign look",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Finalize dress then present",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure comfort and elegance",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Set budget",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Visit store",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Check size if fitting changes",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Compare options then decide",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Evaluate quality and price",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Choose gold or platinum",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Buy online or visit shop",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Inspect ring then purchase",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Check design and comfort",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Ask expert if confusion arises",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Select diamond or gemstone",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Finalize choice then pay",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure value and durability",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Measure grains",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Grind powder",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Add water if thickness changes",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Boil grains then cool",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use bowl and spoon",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use rice or oats",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Cook slowly or heat quickly",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Mix ingredients then serve",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain hygiene and safety",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Adjust consistency if lumps appear",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Use milk or water",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Prepare batch then store",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure nutrition and freshness",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Place baby",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Check scale",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Hold baby if movement increases",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Zero scale then measure",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use scale and cloth",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use digital or manual scale",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Weigh daily or track weekly",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Position baby then read",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain safety and balance",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Adjust placement if imbalance appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Check display or note reading",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Measure weight then log",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure comfort and stability",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Heat water",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Place bottle",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Remove bottle if overheating occurs",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Check temperature then feed",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use container and water",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use warm water or heater",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Shake gently or swirl slowly",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Warm milk then serve",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain hygiene and care",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Avoid heat if nutrients degrade",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Use bottle or container",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Prepare milk then store",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure safety and comfort",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Reduce feeding gradually",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Offer comfort",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Provide alternatives if hunger appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Shorten sessions then stop",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use patience and consistency",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Offer bottle or cup",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Continue feeding or stop feeding",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Support child if distress appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Change routine then observe",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide care and reassurance",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Delay feeding or skip session",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Monitor behavior then adjust",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain comfort and calmness",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Consult expert if difficulty appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Stimulate breasts",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Maintain hydration",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Massage gently if discomfort appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Pump regularly then rest",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use pump and hands",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use pump or manual method",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Continue stimulation or take break",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Stimulate breasts then express",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Increase frequency if supply decreases",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Use supplements or natural foods",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Follow routine then adjust",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure rest and nutrition",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Hold baby",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Position correctly",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Latch baby if feeding starts",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Adjust position then feed",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Support head and neck",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use pillow or cushion",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Feed sitting or lie sideways",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Check latch if pain appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Begin feeding then switch",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain comfort and support",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Continue feeding or pause session",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Observe baby then adjust",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide care and bonding",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Consult expert if issues appear",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Hold baby upright",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Burp gently",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Feed slowly if hiccups start",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Pause feeding then burp",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use gentle taps and support",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use shoulder or lap",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Calm baby if discomfort appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Change position then observe",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide comfort and warmth",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Rock gently or stay still",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Monitor baby then respond",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure calmness and stability",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Seek help if hiccups persist",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Measure ingredients",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Heat oil",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Stir mixture if blending changes",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Combine oils then cool",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use coconut or almond oil",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Heat slowly or cool quickly",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Mix ingredients then store",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Adjust quantity if thickness changes",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Prepare batch then seal",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure purity and quality",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Secure furniture",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Cover outlets",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Block stairs if risk appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Inspect rooms then fix",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use guards and barriers",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use gate or door lock",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Allow access or restrict movement",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Remove hazards if danger appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Check area then secure",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain safety and cleanliness",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use cover or shield",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Install device then test",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide safety and comfort",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Measure space",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Check safety if risk appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Compare items then purchase",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Inspect quality and durability",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Choose crib or bassinet",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Buy online or visit store",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Check size then fit",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure comfort and safety",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Avoid hazards if defects appear",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Select wood or plastic",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Finalize choice then order",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain quality and usability",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Play games",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Read stories",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Use toys if boredom appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Pick game then start",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use music and dance",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use ball or puzzle",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Play indoors or go outside",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Engage kids if energy increases",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Select activity then guide",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide fun and learning",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Draw pictures or build blocks",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Prepare setup then play",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure safety and enjoyment",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Guide breathing",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Reduce noise",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Provide space if activity increases",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Pause activity then relax",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Offer toy or book",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Sit quietly or walk slowly",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Monitor behavior if restlessness appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Observe child then guide",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide comfort and support",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Stay calm or speak softly",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Reduce stimulation then rest",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain peace and control",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Select dress",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Check size",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Adjust fitting if size changes",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Try dress then decide",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Evaluate comfort and design",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Pick silk or lace",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Buy online or visit boutique",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Compare options then finalize",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure elegance and comfort",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Select white or ivory",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Confirm choice then purchase",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain style and fit",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Plan proposal",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Choose location",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Adjust plan if conditions change",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Prepare setup then propose",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use lights and music",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use ring or gift",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Propose publicly or privately",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Arrange details then execute",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Show love and sincerity",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Modify idea if response varies",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Use speech or letter",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Prepare moment then act",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Create memory and emotion",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Measure height",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Check age",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Compare growth if data exists",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Collect data then calculate",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use chart and records",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use ruler or scale",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Estimate manually or use software",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Analyze values then predict",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain accuracy and consistency",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Adjust prediction if variation appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Use data or assumptions",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Evaluate inputs then conclude",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure logic and precision",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Prepare oil",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Ensure comfort",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Avoid pressure if pain appears",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Warm oil then apply",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use hands and support",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Massage slowly or pause briefly",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Check comfort if sensitivity increases",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Start session then continue",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Provide care and relaxation",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Continue massage or stop session",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Observe response then adjust",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Maintain calmness and comfort",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Raise flag",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Prepare decorations",
+        "output": "SIMPLE INSTRUCTION"
+    },
+    {
+        "input": "Follow rules if ceremony requires",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Plan activities then celebrate",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Use flag and banners",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Use flag or poster",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Celebrate publicly or privately",
+        "output": "EXCLUSIVE INSTRUCTION (ACTIONS)"
+    },
+    {
+        "input": "Arrange program then start",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Show respect and pride",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Adjust plan if weather changes",
+        "output": "INSTRUCTION WITH REASON"
+    },
+    {
+        "input": "Use music or speech",
+        "output": "EXCLUSIVE INSTRUCTION (OBJECTS)"
+    },
+    {
+        "input": "Prepare venue then host",
+        "output": "INSTRUCTION WITH SEQUENCE"
+    },
+    {
+        "input": "Ensure order and dignity",
+        "output": "PARALLEL INSTRUCTION"
+    },
+    {
+        "input": "Offer support to help when needed",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Build trust in order to strengthen connection",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Give feedback to improve performance",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Offer help for providing support",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Provide milk to ensure nutrition",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Encourage independence in order to support growth",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Track sleep for monitoring patterns",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Ensure rest to aid recovery",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Encourage good behavior in order to support improvement",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Maintain routine for ensuring stability",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Stay nearby to ensure safety",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Encourage success in order to support progress",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Consult a lawyer for ensuring legality",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Follow guidelines to gain approval",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Encourage reflection in order to support growth",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Invest funds to achieve growth",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Track income for maintaining stability",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Choose material to ensure quality",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Measure the body in order to ensure accuracy",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Select a ring for matching preference",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Confirm authenticity to build trust",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Cook the mixture for enabling feeding",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Check texture to ensure smoothness",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Record weight in order to track progress",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Ensure accuracy for getting correct results",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Warm milk to prepare for feeding",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Test temperature in order to ensure safety",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Encourage independence for promoting growth",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Eat nutritious food to support production",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Track supply in order to enable monitoring",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Ensure nutrition to support growth",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Offer feeding for satisfying hunger",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Use natural oils in order to ensure safety",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Check temperature to ensure proper usage",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Install locks for ensuring safety",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Ensure protection in order to support child movement",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Select furniture to ensure comfort",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Verify certification for ensuring safety",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Choose activity to maximize fun",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Encourage creativity in order to support growth",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Encourage calmness for improving focus",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Encourage relaxation to reduce stress",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Choose style in order to enhance appearance",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Match theme for ensuring coordination",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Select an idea to express creativity",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Ensure surprise in order to increase impact",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Use a formula for improving estimation",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Track progress to enable monitoring",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Use gentle strokes in order to promote relaxation",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Ensure safety to support pregnancy progression",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Organize an event in order to celebrate",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Respect tradition for honoring importance",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Save money to build financial security",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Exercise regularly in order to improve fitness",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Read books to gain knowledge",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Practice coding in order to enhance skills",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Drink water to stay hydrated",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Plan tasks in order to manage time effectively",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Use reminders for tracking important events",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Review notes to prepare for exams",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Follow a schedule in order to maintain discipline",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Clean the workspace for improving productivity",
+        "output": "INSTRUCTION WITH PURPOSE"
+    },
+    {
+        "input": "Communicate clearly to avoid misunderstandings",
+        "output": "INSTRUCTION WITH PURPOSE"
+    }
+]

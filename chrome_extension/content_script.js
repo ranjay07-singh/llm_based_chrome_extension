@@ -133,6 +133,7 @@
     .is-card-num { font-size: 11px; color: #00d4ff; font-weight: 600; margin-bottom: 4px; display: block; }
     .is-card-text { font-size: 14px; color: #e4e4e7; line-height: 1.5; margin-bottom: 8px; display: block; word-wrap: break-word; overflow-wrap: break-word; }
     .is-type { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+    
     /* 7 CLASSIFICATION CATEGORIES */
     .is-type-simple { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; }           /* SIMPLE INSTRUCTION */
     .is-type-sequence { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #fff; }        /* INSTRUCTION WITH SEQUENCE */
@@ -151,13 +152,28 @@
     @keyframes bounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
 
     .is-input-area { padding: 16px 20px; background: rgba(0, 0, 0, 0.3); border-top: 1px solid rgba(255, 255, 255, 0.1); }
-    .is-toggle-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 12px; color: #a1a1aa; }
-    .is-toggle { position: relative; width: 36px; height: 20px; display: inline-block; }
-    .is-toggle input { opacity: 0; width: 0; height: 0; }
-    .is-slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.2); border-radius: 20px; transition: 0.3s; }
-    .is-slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background: white; border-radius: 50%; transition: 0.3s; }
-    .is-toggle input:checked + .is-slider { background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); }
-    .is-toggle input:checked + .is-slider:before { transform: translateX(16px); }
+    .is-mode-row { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+    .is-mode-btn {
+      flex: 1;
+      min-width: 110px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .is-mode-btn:hover { background: rgba(255, 255, 255, 0.15); }
+    .is-mode-btn.active {
+      color: #fff;
+      border-color: rgba(0, 212, 255, 0.7);
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.35) 0%, rgba(0, 153, 204, 0.35) 100%);
+      box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.2) inset;
+    }
 
     .is-input-row { display: flex; gap: 12px; align-items: flex-end; }
     .is-input {
@@ -215,12 +231,14 @@
         <span class="is-welcome-icon">🤖</span>
         <span class="is-welcome-title">Welcome to Instruction Structurer</span>
         <span class="is-welcome-text"></span>
-      </div>Enter a topic or query below. I'll generate and classify instructions into: Simple, Sequence, Parallel, Purpose, Reason, or Exclusive types.
+      </div>
+      <div class="is-intro">Enter a topic or query below. I will process it using the selected mode.</div>
     </div>
     <div class="is-input-area">
-      <div class="is-toggle-row">
-        <label class="is-toggle"><input type="checkbox" id="is-extract" checked><span class="is-slider"></span></label>
-        <span>Extract relevant content from page</span>
+      <div class="is-mode-row" id="is-mode-row">
+        <button class="is-mode-btn active" data-mode="website" title="Use webpage content + query">Web Content</button>
+        <button class="is-mode-btn" data-mode="generate" title="Direct query to LLM">LLM Query</button>
+        <button class="is-mode-btn" data-mode="classify-single" title="Classify your raw instruction only">Raw Classify</button>
       </div>
       <div class="is-input-row">
         <textarea class="is-input" id="is-input" placeholder="Enter your query (e.g., 'make coffee')..." rows="1"></textarea>
@@ -236,7 +254,16 @@
   const sendBtn = shadow.getElementById('is-send');
   const closeBtn = shadow.querySelector('.is-btn-close');
   const settingsBtn = shadow.querySelector('.is-btn-settings');
-  const extractToggle = shadow.getElementById('is-extract');
+  const modeButtons = Array.from(shadow.querySelectorAll('.is-mode-btn'));
+  let selectedMode = 'website';
+
+  modeButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      selectedMode = btn.dataset.mode;
+      modeButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
 
   // Toggle sidebar
   function openSidebar() {
@@ -299,69 +326,30 @@
     if (loading) loading.remove();
   }
 
+  // UPDATED: Now grabs the raw, full page content and lets the Python backend do the filtering
   function extractPageContent(query) {
-    const paragraphs = document.querySelectorAll('article p, article li, main p, main li, [role="main"] p, [role="main"] li, [itemprop="articleBody"] p, [itemprop="articleBody"] li, h1, h2, h3');
-    const queryLower = (query || '').toLowerCase();
-    const keywords = queryLower.split(/\s+/).filter(w => w.length > 2);
-    let relevantContent = [];
-    paragraphs.forEach(el => {
-      if (el.closest('nav, footer, aside, header, .comment, #comments, [id*="comment"], [class*="comment"], .sidebar, .related, .recommend')) {
-        return;
-      }
-      const text = el.innerText.trim();
-      if (text.length > 20 && text.length < 500) {
-        const textLower = text.toLowerCase();
-        if (textLower.includes('http://') || textLower.includes('https://') || textLower.includes('www.')) return;
-        const matchCount = keywords.length > 0 ? keywords.filter(kw => textLower.includes(kw)).length : 0;
-        if (matchCount > 0) relevantContent.push({ text, score: matchCount });
-      }
-    });
-    relevantContent.sort((a, b) => b.score - a.score);
-    const topContent = relevantContent.slice(0, 8).map(c => c.text);
+    let content = '';
 
-    if (topContent.length > 0) {
-      return topContent.join('\n\n').slice(0, 4000);
+    // 1. Try to find the main article block first (cleanest text)
+    const mainSelectors = ['article', 'main', '[role="main"]', '.recipe-content', '.post-content', '.entry-content'];
+    for (const selector of mainSelectors) {
+      const el = document.querySelector(selector);
+      if (el && el.innerText.trim().length > 500) {
+        content = el.innerText;
+        break;
+      }
     }
 
-    const genericBlocks = [];
-    paragraphs.forEach(el => {
-      const text = el.innerText.trim();
-      if (text.length >= 30 && text.length <= 300) {
-        genericBlocks.push(text);
-      }
-    });
-
-    const deduped = [];
-    const seen = new Set();
-    for (const block of genericBlocks) {
-      const key = block.toLowerCase().slice(0, 80);
-      if (!seen.has(key)) {
-        seen.add(key);
-        deduped.push(block);
-      }
-      if (deduped.length >= 12) break;
+    // 2. If no main tag exists, grab the whole body
+    if (!content && document.body) {
+      content = document.body.innerText;
     }
 
-    if (deduped.length > 0) {
-      return deduped.join('\n\n').slice(0, 4000);
-    }
+    if (!content) return null;
 
-    const bodyText = (document.body && document.body.innerText ? document.body.innerText : '').trim();
-    return bodyText ? bodyText.slice(0, 4000) : null;
-  }
-
-  function isWebsiteIntent(query) {
-    if (!query) return false;
-    const q = query.toLowerCase();
-    const websiteKeywords = [
-      'website', 'web site', 'web page', 'webpage', 'browser', 'chrome', 'page content',
-      'site content', 'this page', 'current page', 'from page', 'from website',
-      'summarize web', 'summarize website', 'summarize webpage', 'summarise web',
-      'summarise website', 'summerize web', 'summerize website', 'summerize webpage',
-      'read my website', 'according to my web page',
-      'based on this page', 'extract from page'
-    ];
-    return websiteKeywords.some(k => q.includes(k));
+    // Clean up excessive whitespace and return. We allow a much larger payload (50,000 chars)
+    // because the Python backend is now optimized to chunk and extract it smartly.
+    return content.replace(/\n{3,}/g, '\n\n').trim().slice(0, 50000);
   }
 
   function getTypeClass(type) {
@@ -413,21 +401,6 @@
       html += `<div class="is-summary"><span class="is-summary-label">Summary</span><span class="is-summary-text">${data.summary}</span></div>`;
     }
     
-    if (data.raw && data.raw.length < 200) {
-      html += `<div style="font-size: 14px; line-height: 1.6;">${data.raw}</div>`;
-    } else if (data.mandatory || data.sequential || data.conditional) {
-      let stepNum = 1;
-      ['mandatory', 'sequential', 'conditional', 'exclusive', 'goals'].forEach(key => {
-        if (data[key] && data[key].length > 0) {
-          data[key].forEach(item => {
-            const text = typeof item === 'string' ? item : `If ${item.condition}: ${item.action || (item.actions && item.actions.join(', '))}`;
-            const typeClass = getTypeClass(key);
-            const label = key === 'goals' ? 'Goal' : (key === 'exclusive' ? 'Choice' : `Step ${stepNum++}`);
-            html += `<div class="is-card"><span class="is-card-num">${label}</span><span class="is-card-text">${text}</span><span class="is-type ${typeClass}">${key.charAt(0).toUpperCase() + key.slice(1)}</span></div>`;
-          });
-        }
-      });
-    }
     return html || `<div class="is-card"><span class="is-card-text">${query}</span><span class="is-type is-type-simple">Processed</span></div>`;
   }
 
@@ -442,20 +415,28 @@
     
     showLoading();
 
-    const websiteIntent = isWebsiteIntent(query);
-    const shouldUsePageContent = extractToggle.checked;
-    const extractedContent = shouldUsePageContent ? extractPageContent(query) : null;
-
     const requestData = {
       text: query,
       query: query,
-      hasPageContent: Boolean(extractedContent),
-      mode: extractedContent ? 'website' : (websiteIntent ? 'website' : 'generate')
+      mode: selectedMode
     };
 
-    if (extractedContent) {
+    if (selectedMode === 'website') {
+      const extractedContent = extractPageContent(query);
+      if (!extractedContent) {
+        hideLoading();
+        inputField.disabled = false;
+        sendBtn.disabled = false;
+        inputField.focus();
+        addMessage(`<div class="is-error">❌ Could not extract webpage content. Try LLM Query mode or open a content-rich page.</div>`, 'assistant');
+        return;
+      }
+      requestData.hasPageContent = true;
       requestData.website_content = extractedContent;
       requestData.pageContent = extractedContent;
+    } else if (selectedMode === 'classify-single') {
+      requestData.instruction = query;
+      requestData.paragraph = query;
     }
     
     chrome.runtime.sendMessage({ action: 'parse', ...requestData }, (response) => {
@@ -472,18 +453,10 @@
         return;
       }
       
-      // Debug: log the response
-      console.log('Full response:', JSON.stringify(response, null, 2));
-      
-      // Handle nested result structure
       let data = response.result || response;
-      
-      // If result is nested again, unwrap it
       if (data && data.result) {
         data = data.result;
       }
-      
-      console.log('Data to format:', JSON.stringify(data, null, 2));
       
       const formattedHtml = formatResponse(data, query);
       addMessage(formattedHtml, 'assistant');
